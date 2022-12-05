@@ -11,6 +11,7 @@
 		463CADB42938C24D0045460C /* Day1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463CADB32938C24D0045460C /* Day1.swift */; };
 		464561542939F19A00BB9874 /* InputLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464561532939F19A00BB9874 /* InputLoader.swift */; };
 		464561562939F2E900BB9874 /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464561552939F2E900BB9874 /* Day2.swift */; };
+		46E15EA9293DE04900F44580 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E15EA8293DE04900F44580 /* Day3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,6 +34,8 @@
 		464561532939F19A00BB9874 /* InputLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLoader.swift; sourceTree = "<group>"; };
 		464561552939F2E900BB9874 /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 		464561572939F83E00BB9874 /* day_2_2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day_2_2.txt; sourceTree = "<group>"; };
+		46E15EA7293DE03F00F44580 /* day_3_3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day_3_3.txt; sourceTree = "<group>"; };
+		46E15EA8293DE04900F44580 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,7 @@
 			children = (
 				463CADB52938C2810045460C /* day_1_1.txt */,
 				464561572939F83E00BB9874 /* day_2_2.txt */,
+				46E15EA7293DE03F00F44580 /* day_3_3.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -87,6 +91,7 @@
 			children = (
 				463CADB32938C24D0045460C /* Day1.swift */,
 				464561552939F2E900BB9874 /* Day2.swift */,
+				46E15EA8293DE04900F44580 /* Day3.swift */,
 			);
 			path = Solutions;
 			sourceTree = "<group>";
@@ -153,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				463CADB42938C24D0045460C /* Day1.swift in Sources */,
+				46E15EA9293DE04900F44580 /* Day3.swift in Sources */,
 				464561562939F2E900BB9874 /* Day2.swift in Sources */,
 				464561542939F19A00BB9874 /* InputLoader.swift in Sources */,
 				463CADAD2938C2330045460C /* main.swift in Sources */,
