@@ -10,7 +10,17 @@ let inputLoader = InputLoader(inputPath: inputsPath)
 //Day2
 //let result = Day2().solution1(inputLoader.loadFileAsString("day_2_2.txt"))
 //let result = Day2().solution2(inputLoader.loadFileAsString("day_2_2.txt"))
+
+//Day3
+//let result = Day3().solution1(inputLoader.loadFileAsString("day_3_3.txt"))
 //let result = Day3().solution2(inputLoader.loadFileAsString("day_3_3.txt"))
 
-let result = Day4().solution2(inputLoader.loadFileAsString("day_4.txt"))
+//Day4
+//let result = Day4().solution1(inputLoader.loadFileAsString("day_4.txt"))//Day4
+//let result = Day4().solution2(inputLoader.loadFileAsString("day_4.txt"))
+
+//Day5
+//let result = Day5().solution1(inputLoader.loadFileAsString("day_5.txt"))
+let result = Day5().solution2(inputLoader.loadFileAsString("day_5.txt"))
+
 print(result)

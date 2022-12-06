@@ -13,6 +13,7 @@
 		464561562939F2E900BB9874 /* Day2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464561552939F2E900BB9874 /* Day2.swift */; };
 		46E15EA9293DE04900F44580 /* Day3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E15EA8293DE04900F44580 /* Day3.swift */; };
 		46E15EAB293E0BFD00F44580 /* Day4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46E15EAA293E0BFD00F44580 /* Day4.swift */; };
+		46EC9777293E1893007C9C8D /* Day5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46EC9776293E1893007C9C8D /* Day5.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +40,8 @@
 		46E15EA8293DE04900F44580 /* Day3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day3.swift; sourceTree = "<group>"; };
 		46E15EAA293E0BFD00F44580 /* Day4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day4.swift; sourceTree = "<group>"; };
 		46E15EAC293E0DE000F44580 /* day_4.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day_4.txt; sourceTree = "<group>"; };
+		46EC9776293E1893007C9C8D /* Day5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day5.swift; sourceTree = "<group>"; };
+		46EC9778293E18E8007C9C8D /* day_5.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day_5.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +89,7 @@
 				464561572939F83E00BB9874 /* day_2_2.txt */,
 				46E15EA7293DE03F00F44580 /* day_3_3.txt */,
 				46E15EAC293E0DE000F44580 /* day_4.txt */,
+				46EC9778293E18E8007C9C8D /* day_5.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -97,6 +101,7 @@
 				464561552939F2E900BB9874 /* Day2.swift */,
 				46E15EA8293DE04900F44580 /* Day3.swift */,
 				46E15EAA293E0BFD00F44580 /* Day4.swift */,
+				46EC9776293E1893007C9C8D /* Day5.swift */,
 			);
 			path = Solutions;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				463CADB42938C24D0045460C /* Day1.swift in Sources */,
+				46EC9777293E1893007C9C8D /* Day5.swift in Sources */,
 				46E15EAB293E0BFD00F44580 /* Day4.swift in Sources */,
 				46E15EA9293DE04900F44580 /* Day3.swift in Sources */,
 				464561562939F2E900BB9874 /* Day2.swift in Sources */,
