@@ -20,7 +20,7 @@ struct Day7 {
     
     func findSmallDirs(_ dir: FileSystemNode, dirs: inout [Int]) {
         
-        let dirSize = dir.calculatedSize!
+        let dirSize = dir.calculatedSize
         if dirSize < 100000 {
             dirs.append(dirSize)
         }
@@ -73,6 +73,43 @@ struct Day7 {
         return root
     }
     
+    
+    func solution2(_ input: String) -> Int {
+        let root = createInputFileSystem(input)
+        
+        let totalSpace = 70000000
+        let requiredSpace = 30000000
+        
+        let remainingSpace = totalSpace - root.calculatedSize
+        
+        
+        var dirsToDelete = [FileSystemNode]()
+        findDirsToDelete(root, requiredSpace: requiredSpace, remainingSpace: remainingSpace, dirsToDelete: &dirsToDelete)
+        
+        let sorted = dirsToDelete.sorted {
+            $0.calculatedSize < $1.calculatedSize
+        }
+        
+        
+        return sorted.first!.calculatedSize
+        
+    }
+    
+    func findDirsToDelete(_ dir: FileSystemNode, requiredSpace: Int, remainingSpace: Int, dirsToDelete: inout [FileSystemNode]) {
+    
+        let spaceAfterDeletion = remainingSpace + dir.calculatedSize
+        
+        if spaceAfterDeletion > requiredSpace {
+            dirsToDelete.append(dir)
+        }
+        
+        let childDirs = dir.children.values.filter { $0.type == .dir }
+        for child in childDirs {
+            findDirsToDelete(child, requiredSpace: requiredSpace, remainingSpace: remainingSpace, dirsToDelete: &dirsToDelete)
+        }
+        
+    }
+    
 }
 
 
@@ -94,14 +131,14 @@ class FileSystemNode: CustomDebugStringConvertible, CustomStringConvertible {
     var children: [String: FileSystemNode] = [:]
     var size: Int?
     
-    var calculatedSize: Int? {
+    var calculatedSize: Int {
         if type == .file {
-            return size
+            return size!
         }
         
         var totalSize = 0
         for (_, child) in children {
-            totalSize += child.calculatedSize ?? 0
+            totalSize += child.calculatedSize
         }
         
         return totalSize
@@ -128,6 +165,23 @@ class FileSystemNode: CustomDebugStringConvertible, CustomStringConvertible {
         node.parent = self
         children[node.name] = node
     }
+}
+
+extension FileSystemNode: Hashable {
+    
+    static func == (lhs: FileSystemNode, rhs: FileSystemNode) -> Bool {
+        return lhs.parent == rhs.parent && lhs.name == rhs.name && lhs.type == rhs.type
+    }
+    
+    func hash(into hasher: inout Hasher) {
+            hasher.combine(name)
+            hasher.combine(type)
+            hasher.combine(children)
+            hasher.combine(size)
+            hasher.combine(parent)
+        }
+    
+    
 }
 
 enum NodeType {

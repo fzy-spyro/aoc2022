@@ -27,6 +27,8 @@ let inputLoader = InputLoader(inputPath: inputsPath)
 //let result = Day6().solution1(inputLoader.loadFileAsString("day_6.txt"))
 //let result = Day6().solution2(inputLoader.loadFileAsString("day_6.txt"))
 
-let result = Day7().solution1(inputLoader.loadFileAsString("day_7.txt"))
+//Day7
+//let result = Day7().solution1(inputLoader.loadFileAsString("day_7.txt"))
+let result = Day7().solution2(inputLoader.loadFileAsString("day_7.txt"))
 
 print(result)
