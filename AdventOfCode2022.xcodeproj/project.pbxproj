@@ -38,6 +38,8 @@
 		464561532939F19A00BB9874 /* InputLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputLoader.swift; sourceTree = "<group>"; };
 		464561552939F2E900BB9874 /* Day2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day2.swift; sourceTree = "<group>"; };
 		464561572939F83E00BB9874 /* day_2_2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = day_2_2.txt; sourceTree = "<group>"; };
+		4663CA2D29423CF00086DF24 /* day_7.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day_7.txt; sourceTree = "<group>"; };
+		4663CA2E29423CF00086DF24 /* day_8.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day_8.txt; sourceTree = "<group>"; };
 		46CFCF1A29407A520017442D /* day_6.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = day_6.txt; sourceTree = "<group>"; };
 		46CFCF1B29407A610017442D /* Day6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day6.swift; sourceTree = "<group>"; };
 		46CFCF1D294080D80017442D /* Day7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Day7.swift; sourceTree = "<group>"; };
@@ -96,6 +98,8 @@
 				46E15EAC293E0DE000F44580 /* day_4.txt */,
 				46EC9778293E18E8007C9C8D /* day_5.txt */,
 				46CFCF1A29407A520017442D /* day_6.txt */,
+				4663CA2D29423CF00086DF24 /* day_7.txt */,
+				4663CA2E29423CF00086DF24 /* day_8.txt */,
 			);
 			path = Input;
 			sourceTree = "<group>";
