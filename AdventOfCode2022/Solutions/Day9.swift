@@ -177,7 +177,7 @@ struct BigRope {
         
         for i in 1..<knots.count {
             if knots[i].isAdjacentTo(knots[i-1]) {
-                return
+                continue
             }
             
             let head = knots[i-1]
