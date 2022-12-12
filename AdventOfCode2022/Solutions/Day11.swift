@@ -32,6 +32,36 @@ struct Day11 {
         return activeMonkeys[0].inspectionCounter * activeMonkeys[1].inspectionCounter
     }
     
+    func solution2(_ input: String) -> Int {
+        // with help from reddit: https://www.reddit.com/r/adventofcode/comments/zihouc/comment/izrimjo/?utm_source=share&utm_medium=web2x&context=3
+        let monkeyInputs = parse(input: input)
+        
+        var monkeys = monkeyInputs.map { Monkey(from: $0) }
+        
+        let commonNumber = monkeys.reduce(1, { $0 * $1.testNumber})
+        for (i, _) in monkeys.enumerated() {
+            monkeys[i].commonTestNumber = commonNumber
+        }
+        
+        for round in 0..<10000{
+            for (i, _) in monkeys.enumerated() {
+                
+                while (monkeys[i].items.count > 0) {
+                    let (item, nextMonkeyIndex) = monkeys[i].ispectAndNotGetBored()
+                    guard let item = item, let index = nextMonkeyIndex else { continue }
+                    monkeys[index].grabNewItem(item)
+                }
+            }
+        }
+        
+        
+        let activeMonkeys = monkeys.sorted(by: {
+            $0.inspectionCounter > $1.inspectionCounter
+        })
+        
+        return activeMonkeys[0].inspectionCounter * activeMonkeys[1].inspectionCounter
+    }
+    
     func parse(input: String) -> [String] {
         
         var monkeys = [String]()
@@ -67,8 +97,9 @@ struct Monkey {
     let inputA: OperationInput
     let inputB: OperationInput
     
+    var commonTestNumber: Int?
     
-    var inspectionCounter = 0
+    var inspectionCounter:Int = 0
     
     init(from input: String) {
         // parse input
@@ -108,6 +139,27 @@ struct Monkey {
         
         inspectionItem = inspect(inspectionItem)
         inspectionItem = inspectionItem / 3
+        
+        if inspectionItem % testNumber == 0 {
+            return (inspectionItem, monkeyWhenTrue)
+        } else {
+            return (inspectionItem, monkeyWhenFalse)
+        }
+    }
+    
+    
+    mutating func ispectAndNotGetBored() -> (Int?, Int?) {
+        guard let commonTestNumber = commonTestNumber else {
+            fatalError("common test number not set!")
+        }
+        guard var inspectionItem = items.dequeue() else {
+            //no items to play
+            return (nil, nil)
+        }
+        inspectionCounter += 1
+        
+        inspectionItem = inspect(inspectionItem)
+        inspectionItem = inspectionItem % commonTestNumber
         
         if inspectionItem % testNumber == 0 {
             return (inspectionItem, monkeyWhenTrue)
