@@ -43,7 +43,7 @@ struct Day11 {
             monkeys[i].commonTestNumber = commonNumber
         }
         
-        for round in 0..<10000{
+        for _ in 0..<10000{
             for (i, _) in monkeys.enumerated() {
                 
                 while (monkeys[i].items.count > 0) {
